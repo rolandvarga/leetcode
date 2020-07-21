@@ -1,7 +1,6 @@
 package main_test
 
 import (
-	"strings"
 	"testing"
 )
 
@@ -53,7 +52,7 @@ func BalancedParentheses(s string) bool {
 			if stack.IsEmpty() {
 				return false
 			}
-			top := strings.TrimSpace(stack.Pop())
+			top := stack.Pop()
 			if pairs[top] != string(c) {
 				return false
 			}
